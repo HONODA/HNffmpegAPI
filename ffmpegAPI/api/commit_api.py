@@ -1,13 +1,14 @@
-from channels.generic.websocket import WebsocketConsumer
+from channels.generic.websocket import AsyncWebsocketConsumer
+
 import json
 
-class CommitAPI(WebsocketConsumer):
-    
-    def connect(self):
+class CommitAPI(AsyncWebsocketConsumer):
+
+    async def connect(self):
         self.accept()
-    def disconnect(self,close_code):
+    async def disconnect(self,close_code):
         pass
 
-    def receive(self, text_data=None, bytes_data=None):
+    async def receive(self, text_data=None, bytes_data=None):
 
         return super().receive(text_data=text_data, bytes_data=bytes_data)

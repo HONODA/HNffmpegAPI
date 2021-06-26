@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'channels',
 ]
-#指定ASGI
-ASGI_APPLICATION='ffmpegAPI.routing.application'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,7 +70,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ffmpegAPI.wsgi.application'
-
+#指定ASGI
+ASGI_APPLICATION='ffmpegAPI.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
