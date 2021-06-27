@@ -5,6 +5,13 @@
     },
     {
         "name":"auth_message",
-        "data":{"200":"成功","401":"用户验证错误","402":"请检查视频URL合法性","403":"请检查视频时间合法性","501":"视频转换发生错误"}
+        "data":
+        { 
+            "SUCCESS":{"msg":"成功","state_code":200},
+            "AUTHERR":{"msg":"用户验证错误","state_code":401},
+            "VIDEOERR":{"msg":"请检查视频URL合法性","state_code":402},
+            "TIMEERR":{"msg":"请检查视频时间合法性","state_code":403},
+            "UNKNOWNERR":{"msg":"视频转换发生错误","state_code":501}
+        }
     }
 ]

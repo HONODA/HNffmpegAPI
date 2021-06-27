@@ -17,8 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from ffmpegAPI.api.commit_api import CommitAPI
 from ffmpegAPI.api.search_api import SearchAPI
+from django.shortcuts import render
+
+
+def page_not_found(request, exception):
+    
+    return "ERROR"
+
+handler404 = page_not_found
 urlpatterns = [
-    #path('admin/', admin.site.urls),
     path('commit/',CommitAPI.as_asgi()),
     path('sp/',SearchAPI.as_asgi())
 ]

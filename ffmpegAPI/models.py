@@ -7,11 +7,11 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
-
 class HnVideo(models.Model):
     md = models.CharField(max_length=255)
     url = models.CharField(max_length=2000)
     path = models.CharField(max_length=255)
+    endtime = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = False

@@ -27,10 +27,10 @@
             },
 
         {
-            "name": "Python: 当前文件",
+            "name": "Python: 运行测试",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceRoot}\\ffmpegAPI\\maintest.py",
             "console": "integratedTerminal"
         }
     ]
