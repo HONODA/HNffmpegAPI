@@ -78,11 +78,15 @@ ASGI_APPLICATION='ffmpegAPI.routing.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', # 数据库引擎
+        'NAME': 'hnffmpeg', # 数据库名
+        'USER': 'root', # 账号
+        # 'PASSWORD': 'root', # 密码
+        'HOST': '127.0.0.1', # HOST
+        'POST': 3306, # 端口
+
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

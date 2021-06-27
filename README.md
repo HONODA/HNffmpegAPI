@@ -3,7 +3,13 @@
 
 #### 项目环境： 
     DJANGO，使用微服务框架
-
+#### 安装
+    pip install django==3.2.4 
+    pip install channels==3.0.3
+    pip install channels-redis==3.2.0
+    pip install pymysql==1.0.2
+    pip install mysqlclient==2.0.3
+    
 ### 需求分析：
     1.数据库日志功能
     2.token用户验证功能（可在项目中配置）考虑部署问题
