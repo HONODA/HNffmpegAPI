@@ -1,0 +1,7 @@
+/ffmpegAPI/__pycache__/
+/ffmpegAPI/api/__pycache__/
+/ffmpegAPI/config/__pycache__/
+/ffmpegAPI/services/__pycache__/
+/ffmpegAPI/util/__pycache__/
+db.sqlite3
+*.pyc

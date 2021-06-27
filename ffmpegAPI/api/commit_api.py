@@ -5,7 +5,8 @@ import json
 class CommitAPI(AsyncWebsocketConsumer):
 
     async def connect(self):
-        self.accept()
+        print("已连接")
+        await self.accept()
     async def disconnect(self,close_code):
         pass
 

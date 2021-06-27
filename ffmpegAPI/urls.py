@@ -15,6 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ffmpegAPI.api.commit_api import CommitAPI
+from ffmpegAPI.api.search_api import SearchAPI
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    path('commit/',CommitAPI.as_asgi()),
+    path('sp/',SearchAPI.as_asgi())
 ]
