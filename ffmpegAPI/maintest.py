@@ -10,7 +10,7 @@ import websockets
 # 向服务器端发送认证后的消息
 async def send_msg(websocket):
     while True:
-        _text = input("please enter your context: ")
+        _text = '{"userId":"11","token":"11","url":"www.video.com","start_timestamp":"111","end_timestamp":"222"}'#input("please enter your context: ")
         if _text == "exit":
             print(f'you have enter "exit", goodbye')
             await websocket.close(reason="user exit")
@@ -42,5 +42,6 @@ if __name__ == '__main__':
 
     print("开始测试")
     asyncio.get_event_loop().run_until_complete(main_logic())
-    #"{"userId":"","token":"","url":"","start_timestamp":"","end_timestamp":""}"
+    #{"userId":"","token":"","url":"","start_timestamp":"","end_timestamp":""}
+    #{"userId":"11","token":"11","url":"www.video.com","start_timestamp":"111","end_timestamp":"222"}
     pass

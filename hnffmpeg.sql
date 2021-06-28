@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80018
 File Encoding         : 65001
 
-Date: 2021-06-27 21:37:07
+Date: 2021-06-28 16:50:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -163,14 +163,31 @@ CREATE TABLE `django_session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Table structure for generatevideo
+-- ----------------------------
+DROP TABLE IF EXISTS `generatevideo`;
+CREATE TABLE `generatevideo` (
+  `id` bigint(20) NOT NULL,
+  `userId` bigint(20) DEFAULT NULL,
+  `operadate` datetime DEFAULT NULL,
+  `finished` int(2) DEFAULT NULL,
+  `pushback` int(2) DEFAULT NULL,
+  `url` varchar(2000) COLLATE utf8_bin DEFAULT NULL,
+  `Iurl` varchar(2000) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
 -- Table structure for hn_video
 -- ----------------------------
 DROP TABLE IF EXISTS `hn_video`;
 CREATE TABLE `hn_video` (
-  `md` varchar(255) COLLATE utf8_bin NOT NULL,
+  `id` bigint(20) NOT NULL,
+  `md` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `url` varchar(2000) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `path` varchar(255) COLLATE utf8_bin NOT NULL,
-  `endtime` datetime DEFAULT NULL
+  `endtime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------

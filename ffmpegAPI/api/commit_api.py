@@ -21,7 +21,8 @@ class CommitAPI(AsyncWebsocketConsumer):
         #获取start_timestamp
         #获取end_timestamp
         commitservice = commit_servies()
-        comitmsg = commitservice.commit_url(url = recevie_msg["url"],token= recevie_msg["token"])
+        comitmsg = await commitservice.commit_url(url = recevie_msg["url"],token= recevie_msg["token"],
+        end_timestamp = recevie_msg["end_timestamp"])
         commitstr = json.dumps(comitmsg)
         await self.send(commitstr)
         print(text_data)

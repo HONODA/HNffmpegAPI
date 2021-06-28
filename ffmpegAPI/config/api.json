@@ -1,7 +1,10 @@
 [
     {
         "name":"user_auth",
-        "data":"localhost:8081/userauth"
+        "data":{
+            "host":"localhost:8081/userauth",
+            "closed":true
+        }
     },
     {
         "name":"auth_message",
@@ -11,7 +14,8 @@
             "AUTHERR":{"msg":"用户验证错误","state_code":401},
             "VIDEOERR":{"msg":"请检查视频URL合法性","state_code":402},
             "TIMEERR":{"msg":"请检查视频时间合法性","state_code":403},
-            "UNKNOWNERR":{"msg":"视频转换发生错误","state_code":501}
+            "UNKNOWNERR":{"msg":"视频转换发生错误","state_code":501},
+            "VIDEONOTFOUND":{"msg":"找不到视频","state_code":0}
         }
     }
 ]
