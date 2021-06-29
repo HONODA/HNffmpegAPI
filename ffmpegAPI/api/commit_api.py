@@ -12,7 +12,7 @@ class CommitAPI(AsyncWebsocketConsumer):
         await self.accept()
     async def disconnect(self,close_code):
         pass
-
+    
     async def receive(self, text_data=None, bytes_data=None):
         recevie_msg = json.loads(text_data)
         #获取用户id
@@ -21,10 +21,13 @@ class CommitAPI(AsyncWebsocketConsumer):
         #获取start_timestamp
         #获取end_timestamp
         commitservice = commit_servies()
-        comitmsg = await commitservice.commit_url(url = recevie_msg["url"],token= recevie_msg["token"],
+        commitservice.SUBPROCESSNOTICE = self
+        comitmsg = await commitservice.commit_url(userId= recevie_msg["userId"],url = recevie_msg["url"],token= recevie_msg["token"],
+        start_timestamp=recevie_msg["start_timestamp"],
         end_timestamp = recevie_msg["end_timestamp"])
-        commitstr = json.dumps(comitmsg)
-        await self.send(commitstr)
-        print(text_data)
+        if comitmsg != None:
+            commitstr = json.dumps(comitmsg)
+            await self.send(commitstr)
+            print(text_data)
+        return super().receive(text_data=text_data, bytes_data=bytes_data)
         # print(bytes_data)
-        #return super().receive(text_data=text_data, bytes_data=bytes_data)

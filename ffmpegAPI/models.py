@@ -141,7 +141,7 @@ class HnVideo(models.Model):
     md = models.CharField(max_length=255)
     url = models.CharField(max_length=2000)
     path = models.CharField(max_length=255)
-    endtime = models.DateTimeField(blank=True, null=True)
+    endtime = models.CharField(max_length=32, blank=True, null=True)
 
     class Meta:
         managed = True

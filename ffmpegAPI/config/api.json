@@ -17,5 +17,22 @@
             "UNKNOWNERR":{"msg":"视频转换发生错误","state_code":501},
             "VIDEONOTFOUND":{"msg":"找不到视频","state_code":0}
         }
+    },
+    {
+        "name":"VIDEODIR",
+        "data":
+        {
+            "dir":"Videos"
+        }
+    },
+
+    {
+        "name":"system_message",
+        "data":
+        { 
+            "SUCCESS":{"msg":"成功","state_code":200},
+            "ERROR":{"msg":"错误","state_code":401},
+            "CONTINUE":{"msg":"成功接收，并继续处理","state_code":100}
+        }
     }
 ]
